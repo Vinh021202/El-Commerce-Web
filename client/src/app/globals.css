@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -17,14 +19,22 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
+
+button{font-family: "Montserrat", sans-serif !important;}
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+.ReactCollapse--collapse {
+  transition: height 300ms;
+}
 
 .container{width: 98%; margin: auto; padding: 0px}
-
+.submenu2{opacity: 0 !important; visibility: hidden !important; }
+nav ul li:hover .submenu{opacity: 1; visibility: initial; top: 100%; }
+nav ul li .submenu li:hover .submenu2{opacity: 1 !important; visibility: initial !important;left: 100% 
+  !important ; top: 0px !important; }

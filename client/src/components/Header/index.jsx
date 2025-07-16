@@ -8,6 +8,7 @@ import Badge, { badgeClasses } from '@mui/material/Badge';
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { styled } from '@mui/material/styles';
 import { FaRegHeart } from "react-icons/fa";
+import Nav from './nav';
 
 const CartBadge = styled(Badge)`
   & .${badgeClasses.badge} {
@@ -19,6 +20,7 @@ const CartBadge = styled(Badge)`
 const Header = () => {
   return (
     <>
+    <div className='header w-full sticky -top-[40px]'>
       <div className='top-strip py-2 w-full  border-b-[1px] border-[rgba(0,0,0,0.1)]'>
             <div className='container flex items-center justify-between'>
                 <p className='text-[15px] text-gray-800'>Limited-Time Offers : 
@@ -32,7 +34,7 @@ const Header = () => {
                   </ul>
             </div>
         </div>
-    <header className='py-3'>
+      <header className='py-4'>
       <div className='container flex items-center justify-between'>
           <div className='logo'>
               <Link href={"/"}><img src="/logo1.jpg" alt="logo" className="w-[220px] h-[85px]" /></Link>
@@ -70,6 +72,8 @@ const Header = () => {
           </div>
       </div>
     </header>
+        <Nav />
+    </div>
     </>
   )
 }
